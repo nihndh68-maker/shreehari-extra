@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choose Your Test · Shreehari CD IELTS</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a2a4a;
+    --blue: #2d5a8e;
+    --muted: #6b7280;
+    --label: #8b95a5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(145deg, #f8faff 0%, #eef3fb 100%);
+    color: var(--ink);
+    padding: 28px 24px 64px;
+  }
+  .brand {
+    text-align: center;
+    font-size: clamp(30px, 5.5vw, 52px);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #1e3a5f;
+  }
+  header { text-align: center; margin: 36px 0 40px; }
+  h1 { font-size: clamp(34px, 6vw, 56px); font-weight: 700; letter-spacing: -0.02em; color: var(--ink); }
+  header p { margin-top: 22px; font-size: 18px; color: var(--muted); }
+  .grid {
+    max-width: 625px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 21px 21px;
+  }
+  .tile {
+    height: 125px; background: #fff; border-radius: 16px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-decoration: none; color: var(--blue);
+    box-shadow: 0 5px 17px rgba(45, 90, 142, .09);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .tile:hover { transform: translateY(-3px); box-shadow: 0 9px 22px rgba(45, 90, 142, .16); }
+  .tile:focus-visible { outline: 3px solid rgba(45,90,142,.4); outline-offset: 3px; }
+  .tile .date { font-size: 23px; font-weight: 700; letter-spacing: -0.01em; }
+  .tile .tag {
+    margin-top: 7px; font-size: 11px; font-weight: 600; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--label);
+  }
+  .tile.holiday { cursor: default; pointer-events: none; }
+  @media (max-width: 900px) { .grid { max-width: 420px; gap: 14px; } .tile { height: 100px; } .tile .date { font-size: 19px; } }
+  @media (max-width: 520px) { .grid { max-width: 320px; grid-template-columns: repeat(2, 1fr); } header { margin: 28px 0 32px; } }
+</style>
+</head>
+<body>
+  <div class="brand">Shreehari CD IELTS</div>
+  <header>
+    <h1>Choose Your Test</h1>
+    <p>Select a test to continue</p>
+  </header>
+  <main class="grid">
+    <a class="tile" href="nov_2.html"><span class="date">2 Nov</span></a>
+    <a class="tile" href="nov_3.html"><span class="date">3 Nov</span></a>
+    <a class="tile" href="nov_4.html"><span class="date">4 Nov</span></a>
+    <a class="tile" href="nov_5.html"><span class="date">5 Nov</span></a>
+    <!-- Holiday example: <a class="tile holiday"><span class="date">6 Nov</span><span class="tag">Holiday</span></a> -->
+  </main>
+</body>
+</html>
